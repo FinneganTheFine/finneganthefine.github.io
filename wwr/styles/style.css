@@ -1,0 +1,28 @@
+body {
+    background-color:blue;
+    color:yellow;
+}
+h1 {
+    background-color: orange;
+    width:40%;
+    text-align: center;
+    padding:50px;
+    border:4px solid black;
+    margin:50px;
+    margin-left:30%;
+    margin-right:30%;
+}
+.latin{
+    font-size:45px;
+    color: #0f7ecb;
+    text-shadow:2px 1px white;
+    margin-left:20%;
+    margin-right:20%;
+}
+#fancy{
+    color:blue;
+    text-decoration:underline wavy white 3px;
+    font-family:Ephesis;
+    text-shadow:2px 1px lime;
+    text-align:center;
+}
