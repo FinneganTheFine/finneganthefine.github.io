@@ -1,0 +1,37 @@
+html{
+    background-color:pink;
+    color:white;
+    text-align:center
+}
+body{
+    align-content:center;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+#head{
+    color:white;
+}
+#head:hover{
+    color:black;
+}
+section{
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align:left;
+    color:black;
+}
+#quote{
+    font-family: "Time New Roman";
+    margin-right: 30%;
+    margin-left: 30%;
+    max-width: 50%;
+}
+footer{
+    color:black;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+#fonty{
+    font-family: "Times New Roman";
+}
