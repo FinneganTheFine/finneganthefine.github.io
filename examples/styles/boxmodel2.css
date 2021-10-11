@@ -1,0 +1,82 @@
+@keyframes colorz {
+    0% {color: blue;}
+    25% {color: purple;}
+    37.5% {color: magenta;}
+    50% {color: red;}
+    62.5% {color: orange;}
+    75% {color: yellow;}
+    87.5% {color: green;}
+    100% {color: aqua;}
+}
+@keyframes border-fun {
+    0% {border-color: blue;}
+    25% {border-color: purple;}
+    37.5% {border-color: magenta;}
+    50% {border-color: red;}
+    62.5% {border-color: orange;}
+    75% {border-color: yellow;}
+    87.5% {border-color: green;}
+    100% {border-color: aqua;}
+}
+body{
+    background-color: lime;
+}
+h2{
+    font-size:40px
+}
+.about{
+    background-color: plum;
+    padding:30px;
+    border-radius: 20px;
+    max-width: 50%;
+    box-sizing: border-box;
+
+}
+.about h2{
+    color: purple;
+}
+.contact{
+    background-color: blueviolet;
+    border: 3px dashed #499167;
+}
+.contact p{
+    color: white;
+}
+.info{
+    width:150px;
+    height:150px;
+    border-radius: 150px;
+    background-color: teal;
+    text-align: center;
+    margin: 0 auto;
+}
+.info h2{
+    font-size: 30px;
+    padding-top: 36px;
+    animation-name: colorz;
+    animation-duration: 8s;
+    animation-iteration-count: 999999999;
+}
+main{
+    display:grid;
+    text-align:center;
+    grid-template-columns: 150px 1fr 150px;
+    gap:20px;
+}
+main section{
+    border:1px solid black;
+}
+.bckgrnd{
+    background-color: whitesmoke;
+}
+.bill{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:20px;
+}
+.bill p{
+    border: 3px solid;
+    animation-name: border-fun;
+    animation-duration: 8s;
+    animation-iteration-count: 999999999;
+}
