@@ -44,9 +44,12 @@ nav a:hover{
 }
 .msg {
     background-color: #E2F89C;
+    margin-bottom: 50px
 }
 footer{
     background-color: #E2F89C;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
 }
 .logo{
     width:80px
