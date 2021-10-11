@@ -24,6 +24,7 @@ main section{
 #background{
     height: 725px;
     background-color: #3F7CAC;
+    border: 3px solid #E9EBF8;
 }
 body{
     background-color: #3F7CAC;
@@ -58,4 +59,9 @@ footer a{
 }
 footer h3:hover{
     text-decoration: underline;
+}
+#grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px;
 }
