@@ -62,9 +62,10 @@ footer h3:hover{
 }
 #grid{
     display:grid;
+    max-width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     gap:20px;
 }
 .card-img{
-    width:250px;
+    max-width:100%;
 }
