@@ -1,0 +1,31 @@
+html{
+    margin: 0 auto;
+}
+body{
+    margin: 0 auto;
+    background-color: grey;
+    text-align:center;
+}
+.circles{
+    width: 200px;
+    border: solid 10px rgb(68, 68, 68);
+    border-radius: 200px;
+    margin: 0 auto;
+}
+section{
+    max-width:100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px;
+    padding: 20px;
+}
+#back{
+    max-width:100%;
+    
+}
+h1{
+    position:absolute;
+    top:13.5%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
