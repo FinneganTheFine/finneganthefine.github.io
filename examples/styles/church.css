@@ -1,0 +1,50 @@
+body{
+    background-color: peachpuff;
+}
+main{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 189px 189px 228px;
+    gap:15px;
+    background-color:white;
+    max-width:960px;
+    margin:0 auto;
+    padding:5px 0;
+}
+body, h1, h2, h3, h4, h5, h6{
+    margin:0;
+    padding:0;
+}
+.conference{
+    grid-column:1/3;
+    grid-row:1/3;
+    border:1px solid black;
+    background-color:#234456;
+}
+.prophet{
+    grid-column: 3/5;
+    border:1px solid black;
+    background-color:#bcbfd4;
+    padding-top:149px;
+}
+.learn{
+    grid-column: 3/5;
+    border:1px solid black;
+    background-color:#14b63f;
+}
+.human{
+    border:1px solid black;
+    background-color:#957297;
+}
+.podcast{
+    border:1px solid black;
+    background-color:#67a2b8;
+}
+.news{
+    border:1px solid black;
+    background-color:#95a9e4;
+}
+.hope{
+    border:1px solid black;
+    background-color:#789768;
+}
