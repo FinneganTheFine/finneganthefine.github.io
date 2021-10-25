@@ -41,6 +41,8 @@ body{
 }
 header{
     background-color: #E2F89C;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
 }
 nav a:hover{
     background-color: #E2F89C;
