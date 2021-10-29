@@ -20,6 +20,7 @@ nav a{
 }
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
+    color:#E9EBF8;
 }
 .button-box{
     text-align: center;
@@ -31,22 +32,29 @@ main section img {
     box-sizing: border-box;
 }
 #background{
-    height: 725px;
+    height: 525px;
     background-color: #3F7CAC;
     border: 3px solid #E9EBF8;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 5fr 1fr 1fr;
 }
 .mountains{
     grid-row:2/5;
-    grid-column: 2/10;
+    grid-column: 2/9;
     width:100%;
     height:100%;
+    box-shadow: 5px 5px 10px #E9EBF8;
 }
 .msg{
     grid-row: 3/4;
     grid-column: 7/12;
+    background-color: #E2F89C;
+    margin-bottom: 50px;
+    font-family: Merriweather;
+    line-height: 1.5em;
+    padding:35px;
+    box-shadow: 5px 5px 10px #E9EBF8;
 }
 body{
     background-color: #3F7CAC;
@@ -60,6 +68,7 @@ header{
 }
 nav a:hover{
     background-color: #E2F89C;
+    border: 1px solid black;
 }
 .book, .join{
     background-color: #3F7CAC;
@@ -67,16 +76,11 @@ nav a:hover{
     padding: 15px 30px;
     margin-top:50px;
     border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 10px #E9EBF8;
 }
 .book:hover, .join:hover{
     background-color: #E2F89C;
-}
-.msg {
-    background-color: #E2F89C;
-    margin-bottom: 50px;
-    font-family: Merriweather;
-    line-height: 1.5em;
-    padding:35px;
 }
 footer{
     background-color: #E2F89C;
@@ -106,12 +110,23 @@ footer h3:hover{
 #grid{
     display:grid;
     max-width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:20px;
+    grid-template-columns: 1fr 3fr 1fr 3fr 1fr 3fr 1fr;
+}
+.rivers-card{
+    grid-column:2/3
+}
+.camping-card{
+    grid-column:4/5
+}
+.rapids-card{
+    grid-column:6/7
 }
 .card-img{
     max-width:100%;
     border: 10px solid #E2F89C;
+}
+.card-img:hover{
+    box-shadow: 5px 5px 10px #3F7CAC;
 }
 .home-title{
     font-family: Merriweather;
@@ -126,4 +141,18 @@ footer h3:hover{
 }
 .rivers-card, .camping-card, .rapids-card{
     margin: 200px 0;
+}
+#hero{
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+#hero-box{
+    grid-column:1/-1;
+    grid-row:1/-1;
+}
+#hero-msg{
+    grid-column: 2/-2;
+    grid-row:1/2;
+    margin-top:10%
 }
