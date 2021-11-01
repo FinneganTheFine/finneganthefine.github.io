@@ -1,0 +1,29 @@
+html{
+    margin:auto;
+    width:50%;
+}
+body{
+    margin:0 auto;
+    background-color: #FF8C00;
+}
+header{
+    background-color:#2B2C28;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+}
+nav a{
+    padding:35px;
+    color:#FF8C00;
+}
+nav a:hover{
+    background-color:FF8C00;
+}
+#content{
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #E9EBF8;
+}
+#big-grid{
+
+}
