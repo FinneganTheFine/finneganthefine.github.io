@@ -1,0 +1,54 @@
+html{
+    margin:0 auto;
+    width: 50%;
+    max-width: 500px;
+}
+body{
+    text-align:center;
+}
+h1{
+    font-size:20px;
+}
+#kevin{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    font-size: 20px;
+}
+#tim{
+    text-decoration: underline black;
+    grid-column: 3/4;
+    font-size: 50px;
+}
+
+.ethan{
+    grid-column:2/3;
+    font-size: 50px;
+}
+#ryan{
+    grid-row: 2/3;
+    grid-column: 1/-1;
+}
+#bold{
+
+}
+#steve{
+
+}
+#bill{
+
+}
+button{
+    background-color: grey;
+    max-width: 100%;
+    grid-row: 3/4;
+    grid-column: 3/4;
+    border-radius: 10px;
+    max-height: 60px;
+}
+#up{
+    background-color: rgb(62, 107, 255);
+    max-width: 200px;
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
