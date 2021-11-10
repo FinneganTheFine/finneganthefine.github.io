@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
 html{
     margin: auto;
-    width: 50%
+    width: 75%
 }
 h2{
     margin:0;
@@ -12,15 +12,31 @@ h2{
     text-align: center;
     background-color: #E9EBF8;
 }
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 nav a{
     text-align: center;
     text-decoration: none;
     padding:35px;
+    margin: 0px 0.2%;
     font-size:18px;
 }
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
     color:#E9EBF8;
+    font-size:45px;
+    text-shadow: 3px 2px#3F7CAC;
+}
+#hero-msg h4{
+    margin-top:0;
+    font-size:32px;
+}
+#hero-msg h1{
+    margin-bottom:5px;
 }
 .button-box{
     text-align: center;
@@ -35,10 +51,10 @@ main section img {
     width:100%;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0fr 4fr 1fr 1fr 1fr;
+    grid-template-rows: 0fr 3fr 1fr 1fr 1fr;
 }
 #background{
-    height: 525px;
+    height: 100%;
     background-color: #3F7CAC;
     border: 3px solid #E9EBF8;
     grid-column:1/-1;
@@ -72,11 +88,10 @@ body{
 header{
     background-color: #E2F89C;
     display:grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
 }
 nav a:hover{
-    background-color: #E2F89C;
-    border: 1px solid black;
+    background-color: #3F7CAC;
 }
 .book, .join{
     background-color: #3F7CAC;
@@ -90,6 +105,12 @@ nav a:hover{
 .book:hover, .join:hover{
     background-color: #E2F89C;
 }
+.book{
+    color: #E9EBF8;
+}
+.book:hover{
+    color:#3F7CAC;
+}
 footer{
     background-color: #E2F89C;
     display:grid;
@@ -101,7 +122,8 @@ footer .social img{
     padding-top:15px;
 }
 .logo{
-    width:80px
+    width:80px;
+    margin: 15px;
 }
 #logo-link{
     padding-top: 5px;
