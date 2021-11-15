@@ -35,6 +35,16 @@ p{
 b{
     font-size:24px;
 }
+footer{
+    background-color: #E2F89C;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding:25px 50px;
+    margin-top:200px;
+}
+footer .social img{
+    padding-top:15px;
+}
 .logo{
     height:90%;
     margin: 4px;
@@ -78,4 +88,51 @@ b{
     grid-row:2/3;
     display: flex;
     align-items: center;
+}
+#idaho{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin-bottom:5%;
+    gap:15px;
+}
+#idaho p{
+    text-align:left;
+    margin-left:5%;
+    line-height:1.8em;
+}
+#id-img{
+    width:80%;
+    margin:auto;
+}
+#utah{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin-bottom:5%;
+    gap:15px;
+
+}
+#utah p{
+    margin-right:5%;
+    text-align:right;
+    line-height:1.8em;
+}
+#ut-img{
+    width:90%;
+    margin:auto;
+}
+#az{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    margin-bottom:5%;
+    gap:15px;
+
+}
+#az p{
+    margin-left:5%;
+    text-align:left;
+    line-height:1.8em;
+}
+#ryan{
+    height:100%;
+    margin:auto;
 }
