@@ -1,0 +1,22 @@
+#content{
+    width:50%;
+    margin:0 auto;
+    display:grid;
+    grid-template-rows:1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+img{
+    width:100%;
+    grid-column:1/-1;
+    grid-row:1/-1;
+}
+p{
+    grid-column: 1/-1;
+    grid-row:2/3;
+    text-align:center;
+    color:white;
+    font-size:48px;
+    font-weight:bold;
+    margin-top:0px;
+    text-shadow:1px 2px black;
+}
