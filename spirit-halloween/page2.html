@@ -9,30 +9,60 @@
     <title>Information</title>
 </head>
 <body>
-    <h1>Choose Your Own Adventure Book Editor</h1>
+    <div id=content>
+        <header>
+            <a id="logo_navigation" href="index.html">
+                <img class="logo" src="/wwr/images/icon.png" alt="Logo">
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="/wwr/index.html">River Rafting</a>
+                <a href="site-plan.html">Site Plan</a>
+            </nav>
+        </header>
+        <h1>Add your Comment</h1>
 
-    <button id="publishButton" onclick="publishButtonClick();">PUBLISH BOOK</button>
-    <p>
-        BookTitle:
-        <input type="text" id="bookTitle" onchange="fixButtonGoto(); updateBook();" placeholder="Book Title Goes Here">
-        <!---->
-    </p><p>
-        BookPages:
-        <select id="selectPage" onchange="changePage();"></select>
-        <button id="newPageButton" onclick="newPageButtonClick();">NEW</button>
-        <button id="removePageButton" onclick="removePageButtonClick();">Remove</button>
-    </p><p>
-        PageTitle:
-        <input type="text" id="pageTitle" onchange="updateBook();">
-    </p><p>
-        PageStory:
-        <textarea id="pageStory" onchange="updateBook();" style="width:400px; height:200px;"></textarea>
-    </p><p>
-        PageButtons:<br>
-        <input type="text" id="button1Text" onchange="updateBook();"><input type="text" id="button1Goto" onchange="updateBook();"><br>
-        <input type="text" id="button2Text" onchange="updateBook();"><input type="text" id="button2Goto" onchange="updateBook();"><br>
-        <input type="text" id="button3Text" onchange="updateBook();"><input type="text" id="button3Goto" onchange="updateBook();">
-    </p>
+        <button id="publishButton" onclick="publishButtonClick();">PUBLISH BOOK</button>
+        <p>
+            BookTitle:
+            <input type="text" id="bookTitle" onchange="fixButtonGoto(); updateBook();" placeholder="Book Title Goes Here">
+            <!---->
+        </p><p>
+            BookPages:
+            <select id="selectPage" onchange="changePage();"></select>
+            <button id="newPageButton" onclick="newPageButtonClick();">NEW</button>
+            <button id="removePageButton" onclick="removePageButtonClick();">Remove</button>
+        </p><p>
+            PageTitle:
+            <input type="text" id="pageTitle" onchange="updateBook();">
+        </p><p>
+            PageStory:
+            <textarea id="pageStory" onchange="updateBook();" style="width:400px; height:200px;"></textarea>
+        </p><p>
+            PageButtons:<br>
+            <input type="text" id="button1Text" onchange="updateBook();"><input type="text" id="button1Goto" onchange="updateBook();"><br>
+            <input type="text" id="button2Text" onchange="updateBook();"><input type="text" id="button2Goto" onchange="updateBook();"><br>
+            <input type="text" id="button3Text" onchange="updateBook();"><input type="text" id="button3Goto" onchange="updateBook();">
+        </p>
+        <footer>
+            <div>
+                <h3>conSPIRITcy &copy; 2021 - Cole Williams</h3>
+                <h3><a href="site-plan.html">Site Plan</a></h3>
+                <h3><a href="contactus.html">Contact Us</a></h3>
+            </div>
+            <div class="social">
+                <a href="https://facebook.com" target="_blank">
+                    <img src="images/facebook.png" alt="fb icon">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img src="images/twitter.png" alt="twitter icon">
+                </a>
+                <a href="https://instagram.com" target="_blank">
+                    <img src="images/instagram.png" alt="instagram icon">
+                </a>
+            </div>
+        </footer>
+    </div>
     <script>
         var myBook;
         var hotPage;
