@@ -34,12 +34,12 @@
         </p><p>
             PageStory:
             <textarea id="pageStory" onchange="updateBook();" style="width:400px; height:200px;"></textarea>
-        </p><p>
+        </p><!-- <p>
             PageButtons:<br>
             <input type="text" id="button1Text" onchange="updateBook();"><input type="text" id="button1Goto" onchange="updateBook();"><br>
             <input type="text" id="button2Text" onchange="updateBook();"><input type="text" id="button2Goto" onchange="updateBook();"><br>
             <input type="text" id="button3Text" onchange="updateBook();"><input type="text" id="button3Goto" onchange="updateBook();">
-        </p>
+        </p> -->
         <footer>
             <div>
                 <h3>conSPIRITcy &copy; 2021 - Cole Williams</h3>
@@ -96,12 +96,13 @@
             myBook.pages.push(
                 {title:"NEWTWO",
                 story:"",
-                button1Text:"",
-                button1Goto:"",
-                button2Text:"",
-                button2Goto:"",
-                button3Text:"",
-                button3Goto:""}
+                // button1Text:"",
+                // button1Goto:"",
+                // button2Text:"",
+                // button2Goto:"",
+                // button3Text:"",
+                // button3Goto:""
+            }
             );
             
             populatePageSelect("NEWTWO");
@@ -130,21 +131,21 @@
             if(hotPage){
                 document.getElementById("pageTitle").value = hotPage.title;
                 document.getElementById("pageStory").value = hotPage.story;
-                document.getElementById("button1Text").value = hotPage.button1Text;
-                document.getElementById("button2Text").value = hotPage.button2Text;
-                document.getElementById("button3Text").value = hotPage.button3Text;
-                document.getElementById("button1Goto").value = hotPage.button1Goto;
-                document.getElementById("button2Goto").value = hotPage.button2Goto;
-                document.getElementById("button3Goto").value = hotPage.button3Goto;
+                // document.getElementById("button1Text").value = hotPage.button1Text;
+                // document.getElementById("button2Text").value = hotPage.button2Text;
+                // document.getElementById("button3Text").value = hotPage.button3Text;
+                // document.getElementById("button1Goto").value = hotPage.button1Goto;
+                // document.getElementById("button2Goto").value = hotPage.button2Goto;
+                // document.getElementById("button3Goto").value = hotPage.button3Goto;
             } else {
                 document.getElementById("pageTitle").value = "";
                 document.getElementById("pageStory").value = "";
-                document.getElementById("button1Text").value = "";
-                document.getElementById("button2Text").value = "";
-                document.getElementById("button3Text").value = "";
-                document.getElementById("button1Goto").value = "";
-                document.getElementById("button2Goto").value = "";
-                document.getElementById("button3Goto").value = "";
+                // document.getElementById("button1Text").value = "";
+                // document.getElementById("button2Text").value = "";
+                // document.getElementById("button3Text").value = "";
+                // document.getElementById("button1Goto").value = "";
+                // document.getElementById("button2Goto").value = "";
+                // document.getElementById("button3Goto").value = "";
             }
         }
         function getPageByTitle(zPageTitle){
@@ -186,12 +187,12 @@
                 if (hotPage) {
                 hotPage.title = document.getElementById("pageTitle").value;
                 hotPage.story = document.getElementById("pageStory").value;
-                hotPage.button1Text = document.getElementById("button1Text").value;
-                hotPage.button1Goto = document.getElementById("button1Goto").value;
-                hotPage.button2Text = document.getElementById("button2Text").value;
-                hotPage.button2Goto = document.getElementById("button2Goto").value;
-                hotPage.button3Text = document.getElementById("button3Text").value;
-                hotPage.button3Goto = document.getElementById("button3Goto").value;
+                // hotPage.button1Text = document.getElementById("button1Text").value;
+                // hotPage.button1Goto = document.getElementById("button1Goto").value;
+                // hotPage.button2Text = document.getElementById("button2Text").value;
+                // hotPage.button2Goto = document.getElementById("button2Goto").value;
+                // hotPage.button3Text = document.getElementById("button3Text").value;
+                // hotPage.button3Goto = document.getElementById("button3Goto").value;
                 populatePageSelect(hotPage.title);
             } else {
                 populatePageSelect("");
