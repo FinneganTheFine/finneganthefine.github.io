@@ -1,6 +1,6 @@
 html{
     margin:auto;
-    width:50%;
+    width:75%;
 }
 body{
     margin:0 auto;
@@ -9,7 +9,8 @@ body{
 main{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30px 1fr 1fr 1fr 1fr 1fr 50px ;
+    gap:15px;
 }
 header{
     background-color:#2B2C28;
@@ -29,6 +30,9 @@ nav a{
 nav a:hover{
     background-color:#FF8C00;
     color:#2B2C28;
+}
+p{
+    line-height: 1.8em;
 }
 footer{
     background-color: #2B2C28;
@@ -56,11 +60,65 @@ footer .social img{
     background-color: #E9EBF8;
 }
 #banner{
-    grid-row:1/2;
-    grid-column:1/-1;
+    grid-row:2/3;
+    grid-column:2/-3;
     font-size:48px;
+    background-color:#FF8C00;
+    color:#2B2C28;
+    padding:20px 0px;
 }
 #big-box{
-    grid-column:1/5;
-    grid-row:2/4
+    margin:0;
+    grid-column:9/-1;
+    grid-row:2/-2;
+    background-color: #2B2C28;
+    color:#FF8C00;
+    margin-top:32px;
+    font-size:24px;
+}
+#big-box img{
+    margin-bottom:0;
+}
+#ryan{
+    grid-column:2/5;
+    grid-row:3/6;
+}
+#textbox{
+    grid-column:5/9;
+    grid-row:3/5;
+    background-color: #2B2C28;
+    color:#FF8C00;
+    height:76%;
+}
+#join{
+    grid-row:5/7;
+    grid-column:2/4;
+    background-color:#FF8C00;
+}
+#comment{
+    grid-row:5/7;
+    grid-column:4/9;
+    background-color:#FF8C00;
+    color:#2B2C28;
+}
+#comment textarea{
+    width:99%;
+    height:81%;
+}
+#user{
+    width:90%;
+    margin-bottom:15px;
+    margin-top:10px;
+}
+#password{
+    width:90%;
+
+}
+#join h3{
+    color:#2B2C28;
+}
+#login{
+    margin-top:15px;
+    background-color: #2B2C28;
+    color:#FF8C00;
 }
