@@ -21,6 +21,10 @@
                 <a href="site-plan.html">Site Plan</a>
             </nav>
         </header>
+        <form id='sorry'>
+            <p>This Doesn't work yet, Sorry</p>
+            <button onclick="document.getElementById('sorry').style.display='none'">Oh Well</button>
+        </form>
         <main id='big_grid'>
             <h1 id='banner'>The Spirit Conspiricy</h1>
             <div id='big-box'>
@@ -36,7 +40,7 @@
                 <h3>Login</h3>
                 <input id='user' placeholder='Username'>
                 <input id='password' placeholder='Password'>
-                <button id=login>Login</button>
+                <button id=login onclick="document.getElementById('sorry').style.display='block'">Login</button>
             </div>
             <div id='comment'>
                 <h3>Tell us about your experiences with Spirit</h3>
@@ -72,6 +76,14 @@
         </footer>
     </div>
     <script>
+        var sorry = document.getElementById('sorry');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == sorry) {
+                sorry.style.display = "none";
+            }
+        }
         var myBook;
         var hotPage;
         loadJSON();
