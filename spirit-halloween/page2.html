@@ -21,22 +21,23 @@
                 <a href="site-plan.html">Site Plan</a>
             </nav>
         </header>
-        <h1>Add your Comment</h1>
-
-        <button id="publishButton" onclick="publishButtonClick();">PUBLISH BOOK</button>
-        <!-- <p>
-            BookPages:
-            <select id="selectPage" onchange="changePage();"></select>
-            <button id="newPageButton" onclick="newPageButtonClick();">NEW</button>
-            <button id="removePageButton" onclick="removePageButtonClick();">Remove</button>
-        </p> -->
-        <p>
-            PageTitle:
-            <input type="text" id="pageTitle" onchange="updateBook();">
-        </p><p>
-            PageStory:
-            <textarea id="pageStory" onchange="updateBook();" style="width:400px; height:200px;"></textarea>
-        </p>
+        <form id='sorry' action="postForm.php" method="post">
+            <p>
+                Name:
+                <input name="userName" type="text">
+            </p><p>
+                Blog:
+                <input name="userBlog" type="text">
+            </p><p>
+                <input name="submitButton" type="submit" value="Submit">
+            </p>
+        </form>
+        <h1>Information</h1>
+        <div id="stage">
+        </div>
+        <div id="panel">
+        <!-- <button id="loadButton" onclick="loadJSON();">LOAD DATA</button>  -->
+        </div>
         <footer>
             <div>
                 <h3>conSPIRITcy &copy; 2021 - Cole Williams</h3>
@@ -57,174 +58,56 @@
         </footer>
     </div>
     <script>
-        var myBook;
-        var hotPage;
-        loadJSON();
-    /*=======================*/
-        function removePageButtonClick(){
-            var selectPage = document.getElementById("selectPage");
-            var indexToKill = -1;
-            for(var i = 0;i<myBook.pages.length;i++){
-                if(selectPage.value == myBook.pages[i].title){
-                    indexToKill = i;
-                    break;
-                }
-            }
-            if(indexToKill > -1){
-                myBook.pages.splice(indexToKill,1);
-                populatePageSelect("");
-            }else{
-                console.log("No Matching Page");
-            }
-        }
-        function newPageButtonClick(){
-            var noNewPage = false;
-            for(var i=0;i<myBook.pages.length;i++){
-                var thisPage = myBook.pages[i];
-                if (thisPage.title =="NEWTWO"){
-                    noNewPage = true;
-                    break;
-                }
-            }
-            if (noNewPage) {
-                alert("YOU ALREADY HAVE A NEW PAGE DIMBULB!");
-                return;
-            }
-            myBook.pages.push(
-                {title:"NEWTWO",
-                story:"",
-                // button1Text:"",
-                // button1Goto:"",
-                // button2Text:"",
-                // button2Goto:"",
-                // button3Text:"",
-                // button3Goto:""
-            }
-            );
-            
-            populatePageSelect("NEWTWO");
-            
-        }
-        function fixButtonGoto(){
-            console.log("current page title : " + hotPage.title);
-            console.log("new page title : " + document.getElementById("pageTitle").value);
-            for (var i = 0; i < myBook.pages.length; i++) {
-                var thisPage = myBook.pages[i];
-                if (thisPage.button1Goto == hotPage.title) {
-                    thisPage.button1Goto = document.getElementById("pageTitle").value;
-                }
-                if (thisPage.button2Goto == hotPage.title) {
-                    thisPage.button2Goto = document.getElementById("pageTitle").value;
-                }
-                if (thisPage.button3Goto == hotPage.title) {
-                    thisPage.button3Goto = document.getElementById("pageTitle").value;
-                }
-            }
-        }
-        function changePage(){
-            var selectPage = document.getElementById("selectPage");
-            hotPage = getPageByTitle(selectPage.value);
-            console.log(hotPage);
-            if(hotPage){
-                document.getElementById("pageTitle").value = hotPage.title;
-                document.getElementById("pageStory").value = hotPage.story;
-                // document.getElementById("button1Text").value = hotPage.button1Text;
-                // document.getElementById("button2Text").value = hotPage.button2Text;
-                // document.getElementById("button3Text").value = hotPage.button3Text;
-                // document.getElementById("button1Goto").value = hotPage.button1Goto;
-                // document.getElementById("button2Goto").value = hotPage.button2Goto;
-                // document.getElementById("button3Goto").value = hotPage.button3Goto;
-            } else {
-                document.getElementById("pageTitle").value = "";
-                document.getElementById("pageStory").value = "";
-                // document.getElementById("button1Text").value = "";
-                // document.getElementById("button2Text").value = "";
-                // document.getElementById("button3Text").value = "";
-                // document.getElementById("button1Goto").value = "";
-                // document.getElementById("button2Goto").value = "";
-                // document.getElementById("button3Goto").value = "";
-            }
-        }
-        function getPageByTitle(zPageTitle){
-            for(var i=0;i<myBook.pages.length;i++){
-                var thisPage = myBook.pages[i];
-                if(thisPage.title == zPageTitle){
-                    return thisPage;
-                }
-            }
-            return false;
-        }
-        function populateBook(){
-            populatePageSelect("");
-        }
-        function populatePageSelect(selectTitle){
-            var selectPage = document.getElementById("selectPage");
-            
-            selectPage.innerHTML = "";
-            
-            /* loop through all the pages in the book */
-            for (var i = 0; i < myBook.pages.length; i++) {
-                var thisPage = myBook.pages[i];
+        var stage;
+      var blogData;
 
-                /* create an option for each page */
-                var newOption = document.createElement("option");
-                newOption.setAttribute("value", thisPage.title);
-                newOption.innerHTML = thisPage.title;
-                if (selectTitle == thisPage.title) {
-                    newOption.selected = true;
-                }
-                selectPage.appendChild(newOption);
-            }
-            //getButtonID();
-            changePage();
-        }
-        function updateBook(){
-            //myBook.title = document.getElementById("bookTitle").value;
-            
-                if (hotPage) {
-                hotPage.title = document.getElementById("pageTitle").value;
-                hotPage.story = document.getElementById("pageStory").value;
-                // hotPage.button1Text = document.getElementById("button1Text").value;
-                // hotPage.button1Goto = document.getElementById("button1Goto").value;
-                // hotPage.button2Text = document.getElementById("button2Text").value;
-                // hotPage.button2Goto = document.getElementById("button2Goto").value;
-                // hotPage.button3Text = document.getElementById("button3Text").value;
-                // hotPage.button3Goto = document.getElementById("button3Goto").value;
-                populatePageSelect(hotPage.title);
-            } else {
-                populatePageSelect("");
-            }
-        }
-        function publishButtonClick(){
-            saveJSON();
-        }
-        function saveJSON(){
-            var xhttp = new XMLHttpRequest();
-        
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    console.log(this.responseText);
-                }
-            };
-            
-            xhttp.open("POST", "saveJSON.php", true);
-            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-            xhttp.send(encodeURIComponent(JSON.stringify(myBook)));  
-        }
-        function loadJSON(){
-            /* make an AJAX call to get our object data */
-            var xhttp = new XMLHttpRequest();
-            
-            xhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    myBook = JSON.parse(this.responseText);
-                    populateBook();
-                }
-            };
-            
-            xhttp.open("GET", "info.json", true);
-            xhttp.send();    
-        }
+      window.onload = init;
+
+      /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+      function init() 
+      {
+          stage = document.getElementById("stage");
+          //setInterval(loadJSON, 2000);
+      }
+
+      function renderData()
+      {
+          stage.innerHTML = "";
+          
+          for (var i = 0; i < blogData.length; i++) {
+              var thisBlog = blogData[i];
+              
+              var blogDiv = document.createElement("div");
+              blogDiv.setAttribute("class", "blog");
+              
+              var prettyDate = new Date(thisBlog.postTime*1000);
+              
+              var tempStr = "";
+              tempStr += "<h4>" + thisBlog.userName + " :: "+prettyDate.getDay()+"/"+prettyDate.getMonth()+"/"+prettyDate.getFullYear()+"   "+prettyDate.getHours()+":"+prettyDate.getMinutes()+"</h4>";
+              tempStr += "<p>"+thisBlog.userBlog+"</p>";
+              
+              blogDiv.innerHTML = tempStr;
+              
+              stage.appendChild(blogDiv);
+          }
+          
+      }
+
+      function loadJSON()
+      {
+          /* make an AJAX call to get our object data */
+          var xhttp = new XMLHttpRequest();
+          
+          xhttp.onreadystatechange = function() {
+              if (this.readyState == 4 && this.status == 200) {
+                  blogData = JSON.parse(this.responseText);
+                  renderData();
+              }
+          };
+          
+          xhttp.open("GET", "info.json?DUMMY=" + Date.now(), true);
+          xhttp.send();    
+      }
     </script>
 </body>
 </html>
