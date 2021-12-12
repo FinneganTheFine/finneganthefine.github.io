@@ -84,7 +84,7 @@
               var prettyDate = new Date(thisBlog.postTime*1000);
               
               var tempStr = "";
-              tempStr += "<h4>" + thisBlog.userName + " :: "+prettyDate.getDay()+"/"+prettyDate.getMonth()+"/"+prettyDate.getFullYear()+"   "+prettyDate.getHours()+":"+prettyDate.getMinutes()+"</h4>";
+              tempStr += "<h3>" + thisBlog.userName + " :: "+prettyDate.getDay()+"/"+prettyDate.getMonth()+"/"+prettyDate.getFullYear()+"   "+prettyDate.getHours()+":"+prettyDate.getMinutes()+"</h3>";
               tempStr += "<p>"+thisBlog.userBlog+"</p>";
               
               blogDiv.innerHTML = tempStr;

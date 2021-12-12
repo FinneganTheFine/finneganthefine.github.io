@@ -41,6 +41,16 @@ footer .social img{
     padding-top:15px;
     background-color: #2B2C28;
 }
+.blog {
+    background-color:silver;
+    margin:4px;
+    border:2px solid #131515;
+    border-radius:10px;
+    padding:4px;
+}
+.blog h3{
+    text-align: left;
+}
 #content{
     max-width: 1600px;
     margin: 0 auto;
