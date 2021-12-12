@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
 html{
     margin:auto;
     width:75%;
@@ -66,6 +67,8 @@ footer .social img{
     background-color:#FF8C00;
     color:#2B2C28;
     padding:20px 0px;
+    font-family: Fruktur;
+
 }
 #big-box{
     margin:0;
