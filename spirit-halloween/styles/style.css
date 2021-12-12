@@ -18,6 +18,12 @@ header{
     display:grid;
     grid-template-columns: 1fr 3fr;
 }
+header img{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
 nav{
     display: flex;
     flex-direction: row;
