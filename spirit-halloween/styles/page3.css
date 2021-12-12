@@ -9,11 +9,13 @@ body{
 }
 header{
     background-color:#2B2C28;
+    padding:15px 0px;
     display:grid;
     grid-template-columns: 1fr 3fr;
 }
 header img{
-    width:80%;
+    width:33%;
+    margin: 0 auto;
 }
 nav{
     display: flex;
@@ -82,6 +84,16 @@ img{
 #img1 p{
     background-color: #FF8C00;
     color:#2B2C28;
+    line-height: 1.5em;
+    font-size: 14;
+    font-weight: 300;
+}
+#text_box{
+    font-size:18px;
+    line-height: 2em;
+}
+#text_box b{
+    font-size: 36px;
 }
 #links{
     grid-column: 3/5;
