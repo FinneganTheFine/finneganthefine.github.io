@@ -63,3 +63,21 @@ footer .social img{
     text-align: center;
     background-color: #E9EBF8;
 }
+#sorry{
+    display:none;
+    z-index:1;
+    position:absolute;
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 75%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#sorry button{
+    background-color: #2B2C28;
+    color:#FF8C00;
+}
