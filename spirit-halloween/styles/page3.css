@@ -16,6 +16,7 @@ header{
 header img{
     width:33%;
     margin: 0 auto;
+    padding-top:5%;
 }
 nav{
     display: flex;
