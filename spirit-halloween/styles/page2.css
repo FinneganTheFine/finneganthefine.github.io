@@ -32,6 +32,13 @@ nav a:hover{
     background-color:#FF8C00;
     color:#2B2C28;
 }
+button{
+    background-color: #FF8C00;
+    color:#2B2C28;
+    font-size:24px;
+    font-family: Fruktur;
+    margin-top:35px;
+}
 footer{
     background-color: #2B2C28;
     display:grid;
