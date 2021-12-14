@@ -86,10 +86,10 @@ footer .social img{
     border: 1px solid #888;
     width: 75%;
     height: 35%;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 #sorry button{
     background-color: #2B2C28;
