@@ -12,6 +12,10 @@ header{
     display:grid;
     grid-template-columns: 1fr 3fr;
 }
+h1{
+    font-family:Fruktur;
+    font-size:36px;
+}
 header img{
     width:15%;
     margin: 0 auto;
